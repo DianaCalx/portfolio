@@ -1,0 +1,48 @@
+:root{
+  --black: #000;
+  --sky-blue: #6ba3ad;
+  --white: #fff;
+  --mint: #438e96;
+  --ligth-gray: #ced4da;
+  --blue: #0c8599;
+  --my-gray: #f0f0f8;
+  --my-second-gray: #dbdbdb;
+  --dark: #343a40;
+  --yellow: #ecaa20;
+  --yellow-light: #ecaa20;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Signika", serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  background: rgb(2,0,36);
+  background: linear-gradient(to bottom, #1e1e2a 0%, #111113 50%, #0d0d0d 100%);
+  min-height: 100vh;
+}
+
+body.dark {
+  background: var(--my-second-gray);
+  color: var(--dark);
+}
+
+body.dark #avatar{
+  background: var(--dark);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img{
+  display: block;
+}
+
