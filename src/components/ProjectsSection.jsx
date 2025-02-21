@@ -1,37 +1,36 @@
 import styled from "styled-components";
-import { projects } from "../data/data" 
+import { projects } from "../data/data";
 import { FaLink } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 const ProjectsSection = () => {
-  const {t} = useTranslation();
+  const { t } = useTranslation();
 
   const elements = document.getElementsByClassName("projectimg");
 
-  
   //Agregar efecto 3D a las imagenes de los proyectos
   Array.from(elements).forEach((el) => {
     const height = el?.clientHeight;
     const widht = el?.clientWidth;
 
-    el?.addEventListener('mousemove', (event) => {
-      const {layerX, layerY} = event;
-  
+    el?.addEventListener("mousemove", (event) => {
+      const { layerX, layerY } = event;
+
       const yRotation = ((layerX - widht / 2) / widht) * 20;
-  
+
       const XRotation = ((layerY - height / 2) / widht) * 20;
-  
+
       const string = `
         perspective(500px)
         scale(1.02)
         rotateX(${XRotation}deg)
         rotateY(${yRotation}deg)
       `;
-  
+
       el.style.transform = string;
-    })
-  
-    el?.addEventListener('mouseout', () => {
+    });
+
+    el?.addEventListener("mouseout", () => {
       el.style.transform = `
         perspective(500px)
         scale(1)
@@ -39,34 +38,50 @@ const ProjectsSection = () => {
         rotateY(0)
       `;
     });
-  })
-  
+  });
 
   return (
     <div id="projects">
-      <Title>{'</>'}{t('projects')}</Title>
+      <Title>
+        {"</>"}
+        {t("projects")}
+      </Title>
       {projects.map((project) => (
-          <Project key={project.title}>
-            <ImageLink href={project.link} target="_blank" className="projectimg">
-              <Image src={project.image} alt={project.title} />
-            </ImageLink>
+        <Project key={project.title}>
+          <ImageLink
+            href={project.link}
+            target="_blank"
+            className="projectimg"
+          >
+            <Image
+              src={project.image}
+              alt={project.title}
+            />
+          </ImageLink>
+          <div>
+            <TitleProject>{t(project.title)}</TitleProject>
+            <Warning>
+              {(t(project.title) === "Netflix Website" ||
+                t(project.title) === "Sitio web de Netflix") &&
+                t("netflixWarning")}
+            </Warning>
+            <DescProject>{t(project.description)}</DescProject>
+
             <div>
-              <TitleProject>{t(project.title)}</TitleProject>
-              <DescProject>{t(project.description)}</DescProject>
-              <div>
-                <Link href={project.link} target="_blank">
-                  <FaLink/>
-                  Demo
-                </Link>
-              </div>
-            </div>         
-          </Project>
-        )
-      )
-    }
+              <Link
+                href={project.link}
+                target="_blank"
+              >
+                <FaLink />
+                Demo
+              </Link>
+            </div>
+          </div>
+        </Project>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 const Title = styled.h2`
   font-size: 4rem;
@@ -79,7 +94,7 @@ const ImageLink = styled.a`
   width: auto;
   height: auto;
 
-  :hover{
+  :hover {
     transform: scale(1.05);
     transition: transform 0.5s;
   }
@@ -89,10 +104,10 @@ const Image = styled.img`
   border-radius: 1rem;
   width: 40rem;
   height: auto;
-  transition: box-shadow .1s, transform .1s;
+  transition: box-shadow 0.1s, transform 0.1s;
 
-  :hover{
-    box-shadow: 0px 0px 50px rgba(0,0,0,1);
+  :hover {
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
   }
 `;
 
@@ -104,7 +119,7 @@ const Project = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media screen and (min-width:600px){
+  @media screen and (min-width: 600px) {
     flex-direction: row;
   }
 `;
@@ -112,6 +127,13 @@ const Project = styled.div`
 const TitleProject = styled.p`
   font-size: 3rem;
   font-weight: 700;
+`;
+
+const Warning = styled.p`
+  font-weight: 600;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: var(--sky-blue2);
 `;
 
 const DescProject = styled.p`
@@ -131,7 +153,6 @@ const Link = styled.a`
   gap: 0.5rem;
   border: 2px solid var(--mint);
   text-decoration: none;
-  
 `;
 
-export default ProjectsSection
+export default ProjectsSection;

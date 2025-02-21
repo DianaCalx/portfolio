@@ -1,6 +1,7 @@
-:root{
+:root {
   --black: #000;
   --sky-blue: #6ba3ad;
+  --sky-blue2: #88d3e0;
   --white: #fff;
   --mint: #438e96;
   --ligth-gray: #ced4da;
@@ -22,7 +23,7 @@ body {
   font-family: "Signika", serif;
   font-size: 1.5rem;
   color: var(--white);
-  background: rgb(2,0,36);
+  background: rgb(2, 0, 36);
   background: linear-gradient(to bottom, #1e1e2a 0%, #111113 50%, #0d0d0d 100%);
   min-height: 100vh;
 }
@@ -32,7 +33,7 @@ body.dark {
   color: var(--dark);
 }
 
-body.dark #avatar{
+body.dark #avatar {
   background: var(--dark);
 }
 
@@ -42,7 +43,6 @@ body.dark #avatar{
   box-sizing: border-box;
 }
 
-img{
+img {
   display: block;
 }
-
