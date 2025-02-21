@@ -133,7 +133,7 @@ const Warning = styled.p`
   font-weight: 600;
   margin: 1rem 0;
   font-size: 1.7rem;
-  color: var(--sky-blue2);
+  color: var(--blue);
 `;
 
 const DescProject = styled.p`
