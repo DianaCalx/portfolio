@@ -104,6 +104,7 @@ const ProjectsSection = () => {
                     alt={project.title}
                   />
                 </ImageLink>
+                <TitleProject>{t(project.title)}</TitleProject>
               </Project>
             );
           })}
