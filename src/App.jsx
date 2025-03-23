@@ -28,8 +28,8 @@ const resources = {
       fantaDesc:
         "This project is developed using React for the UI, Vite for fast builds, Motion for animations, React Mouse Follower for interactive cursor effects, and TailwindCSS for responsive and modern styling.",
       netflixTitle: "Netflix Website",
-      netflixWarning:
-        "This site takes two minutes to load because it is on free hosting.",
+      websiteWarning:
+        "This site can take up to two minutes to load because it is on free hosting.",
       netflixDesc:
         "This project is built with React for the UI, Node.js for the backend, Axios for API communication, Json Web Token for authentication, Zustand for state management, TailwindCSS for modern styling, and Toast for user notifications.",
       productTitle: "Products Website",
@@ -59,8 +59,8 @@ const resources = {
       fantaDesc:
         "Este proyecto está desarrollado utilizando React para la interfaz de usuario, Vite para compilaciones rápidas, Motion para animaciones, React Mouse Follower para efectos de cursor interactivos y TailwindCSS para estilos modernos y responsivos.",
       netflixTitle: "Sitio web de Netflix",
-      netflixWarning:
-        "Este sitio tarda dos minutos en cargar porque está en hosting gratuito.",
+      websiteWarning:
+        "Este sitio puede tardar hasta dos minutos en cargar porque está en hosting gratuito.",
       netflixDesc:
         "Este proyecto está construido con React para la interfaz de usuario, Node.js para el backend, Axios para la comunicación con la API, Json Web Token para la autenticación, Zustand para la gestión del estado, TailwindCSS para estilos modernos y Toast para notificaciones al usuario.",
       productTitle: "Sitio web de Productos",

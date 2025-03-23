@@ -62,8 +62,10 @@ const ProjectsSection = () => {
             <TitleProject>{t(project.title)}</TitleProject>
             <Warning>
               {(t(project.title) === "Netflix Website" ||
-                t(project.title) === "Sitio web de Netflix") &&
-                t("netflixWarning")}
+                t(project.title) === "Sitio web de Netflix" ||
+                t(project.title) === "Products Website" ||
+                t(project.title) === "Sitio web de Productos") &&
+                t("websiteWarning")}
             </Warning>
             <DescProject>{t(project.description)}</DescProject>
 
@@ -102,14 +104,6 @@ const ProjectsSection = () => {
                     alt={project.title}
                   />
                 </ImageLink>
-                <div>
-                  <TitleProject>{t(project.title)}</TitleProject>
-                  <Warning>
-                    {(t(project.title) === "Netflix Website" ||
-                      t(project.title) === "Sitio web de Netflix") &&
-                      t("netflixWarning")}
-                  </Warning>
-                </div>
               </Project>
             );
           })}
