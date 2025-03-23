@@ -13,6 +13,7 @@ const resources = {
   en: {
     translation: {
       projects: "Projects",
+      otherprojects: "Other Projects",
       about: "About me",
       contact: "Contact",
       greeting: "Hi, I'm Diana Calderón",
@@ -43,6 +44,7 @@ const resources = {
   es: {
     translation: {
       projects: "Proyectos",
+      otherprojects: "Otros Proyectos",
       about: "Acerca de mi",
       contact: "Contacto",
       greeting: "Hola, soy Diana Calderón",

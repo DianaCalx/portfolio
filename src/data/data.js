@@ -1,15 +1,16 @@
-import { 
+import {
   appleWebsite,
-  fantaWebsite, 
-  netflixWebsite, 
-  productsWebsite, 
-  caloriesTrackerWebsite, 
-  css, 
-  git, 
+  fantaWebsite,
+  netflixWebsite,
+  productsWebsite,
+  caloriesTrackerWebsite,
+  memogame,
+  css,
+  git,
   html,
   js,
   node,
-  react 
+  react,
 } from "../assets";
 
 export const projects = [
@@ -17,13 +18,13 @@ export const projects = [
     title: "appleTitle",
     image: appleWebsite,
     description: "appleDesc",
-    link: "https://new-iphone-sv.netlify.app/"
+    link: "https://new-iphone-sv.netlify.app/",
   },
   {
     title: "fantaTitle",
     image: fantaWebsite,
     description: "fantaDesc",
-    link: "https://soda-f-app.netlify.app/"
+    link: "https://soda-f-app.netlify.app/",
   },
   {
     title: "netflixTitle",
@@ -35,39 +36,47 @@ export const projects = [
     title: "productTitle",
     image: productsWebsite,
     description: "productDesc",
-    link: "https://rest-api-products-frontend-gules.vercel.app/"
+    link: "https://rest-api-products-frontend-gules.vercel.app/",
   },
   {
     title: "caloriesTitle",
     image: caloriesTrackerWebsite,
     description: "caloriesDesc",
-    link: "https://caloriestracker-app.netlify.app/"
+    link: "https://caloriestracker-app.netlify.app/",
+  },
+];
+
+export const secondaryProjects = [
+  {
+    title: "Memo Game",
+    image: memogame,
+    link: "https://memogamee.netlify.app/",
   },
 ];
 
 export const skills = [
   {
     logo: js,
-    name: "Javascript"
+    name: "Javascript",
   },
   {
     logo: react,
-    name: "React"
+    name: "React",
   },
   {
     logo: css,
-    name: "CSS"
+    name: "CSS",
   },
   {
     logo: html,
-    name: "HTML"
+    name: "HTML",
   },
   {
     logo: git,
-    name: "Git"
+    name: "Git",
   },
   {
     logo: node,
-    name: "Node"
-  }
-] 
+    name: "Node",
+  },
+];

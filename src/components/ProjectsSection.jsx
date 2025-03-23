@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { projects } from "../data/data";
+import { projects, secondaryProjects } from "../data/data";
 import { FaLink } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
@@ -79,6 +79,42 @@ const ProjectsSection = () => {
           </div>
         </Project>
       ))}
+
+      <div>
+        <Title>
+          {"</>"}
+          {t("otherprojects")}
+        </Title>
+        <OtherProjects>
+          {secondaryProjects.map((project) => {
+            return (
+              <Project
+                key={project.title}
+                className="others"
+              >
+                <ImageLink
+                  href={project.link}
+                  target="_blank"
+                  className="projectimg"
+                >
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                  />
+                </ImageLink>
+                <div>
+                  <TitleProject>{t(project.title)}</TitleProject>
+                  <Warning>
+                    {(t(project.title) === "Netflix Website" ||
+                      t(project.title) === "Sitio web de Netflix") &&
+                      t("netflixWarning")}
+                  </Warning>
+                </div>
+              </Project>
+            );
+          })}
+        </OtherProjects>
+      </div>
     </div>
   );
 };
@@ -122,6 +158,11 @@ const Project = styled.div`
   @media screen and (min-width: 600px) {
     flex-direction: row;
   }
+
+  &.others {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 const TitleProject = styled.p`
@@ -153,6 +194,11 @@ const Link = styled.a`
   gap: 0.5rem;
   border: 2px solid var(--mint);
   text-decoration: none;
+`;
+
+const OtherProjects = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 `;
 
 export default ProjectsSection;
